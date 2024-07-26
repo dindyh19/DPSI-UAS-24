@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 
 const StakeholderSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    influence: { type: Number, required: true },
-    interest: { type: Number, required: true }
+    name: String,
+    influence: Number,
+    importance: Number,
+    rank: Number
 });
 
 module.exports = mongoose.model('Stakeholder', StakeholderSchema);
