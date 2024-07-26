@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login" class="page">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="dashboard" class="page">
+        <h2>Dashboard</h2>
+        <button id="fetchStakeholders">Identify Stakeholders</button>
+        <button id="fetchRequirements">Collect & Prioritize Requirements</button>
+        <div id="stakeholderList"></div>
+        <div id="requirementList"></div>
+        <form id="priorityForm">
+            <input type="text" id="criteria" placeholder="Criteria for prioritization">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

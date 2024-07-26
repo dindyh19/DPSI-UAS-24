@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prioritize Stakeholders</title>
+</head>
+<body>
+    <h1>Prioritized Stakeholders</h1>
+    <ul>
+        <% stakeholders.forEach(stakeholder => { %>
+            <li><%= stakeholder.name %> - Priority: <%= stakeholder.priority %></li>
+        <% }) %>
+    </ul>
+</body>
+</html>

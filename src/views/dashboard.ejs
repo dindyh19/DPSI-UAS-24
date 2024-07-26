@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <form action="/api/prioritize" method="POST">
+        <label for="influence_weight">Influence Weight:</label>
+        <input type="number" name="influence_weight" required>
+        <label for="interest_weight">Interest Weight:</label>
+        <input type="number" name="interest_weight" required>
+        <button type="submit">Prioritize Stakeholders</button>
+    </form>
+    <ul>
+        <% stakeholders.forEach(stakeholder => { %>
+            <li><%= stakeholder.name %> - Influence: <%= stakeholder.influence %>, Interest: <%= stakeholder.interest %></li>
+        <% }) %>
+    </ul>
+
+    <!-- Form to prioritize requirements -->
+    <form action="/api/prioritize" method="POST">
+        <label for="criteria[importance]">Importance:</label>
+        <input type="number" name="criteria[importance]" required>
+        <label for="criteria[urgency]">Urgency:</label>
+        <input type="number" name="criteria[urgency]" required>
+        <button type="submit">Prioritize Requirements</button>
+    </form>
+</body>
+</html>

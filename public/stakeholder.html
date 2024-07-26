@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prioritas Stakeholder</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Prioritas Stakeholder</h1>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+    <form id="criteriaForm" style="display:none;">
+        <h2>Masukkan Kriteria Prioritas</h2>
+        <label for="criteria">Kriteria:</label>
+        <input type="text" id="criteria" name="criteria" required>
+        <button type="submit">Prioritaskan</button>
+    </form>
+    <div id="result" style="display:none;">
+        <h2>Daftar Peringkat Stakeholder</h2>
+        <ul id="stakeholderList"></ul>
+    </div>
+    <script src="/scripts.js"></script>
+</body>
+</html>

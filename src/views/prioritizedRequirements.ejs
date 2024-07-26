@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prioritized Requirements</title>
+</head>
+<body>
+    <h1>Prioritized Requirements</h1>
+    <ul>
+        <% requirements.forEach(requirement => { %>
+            <li>
+                <%= requirement.content %> - Priority: <%= requirement.priority %>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>

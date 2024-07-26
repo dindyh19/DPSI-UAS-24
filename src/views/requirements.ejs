@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Requirements</title>
+</head>
+<body>
+    <h1>Collected Requirements</h1>
+    <ul>
+        <% requirements.forEach(requirement => { %>
+            <li>
+                <%= requirement.content %> - <%= requirement.source %> 
+                <% if (!requirement.confirmed) { %>
+                    <form action="/api/confirm/<%= requirement._id %>" method="POST" style="display:inline;">
+                        <button type="submit">Confirm</button>
+                    </form>
+                <% } else { %>
+                    <span>Confirmed</span>
+                <% } %>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
